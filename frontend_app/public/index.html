@@ -1,0 +1,41 @@
+<html>
+<head>
+  <script type="text/javascript"
+          src="https://code.jquery.com/jquery-2.1.4.min.js">
+  </script>
+  <script
+    type="text/javascript"
+    src="/js/app.js">
+  </script>
+  <link
+    rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+  >
+  <script
+    type="text/javascript"
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+  </script>
+
+</head>
+<body>
+  <div id="person-view"></div>
+
+  <script type="text/javascript">
+var React = require('react');
+var PersonHttpAPI = require('sources/PersonHttpAPI');
+var PersonStore = require('stores/PersonStore');
+var PersonView = require('components/PersonView');
+
+PersonHttpAPI.getAll();
+
+var personView = React.render(
+  React.createElement(PersonView, null),
+  document.getElementById('person-view')
+);
+  </script>
+
+
+
+
+</body>
+</html>
